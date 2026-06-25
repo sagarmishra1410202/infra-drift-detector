@@ -1,0 +1,15 @@
+node_modules/
+.next/
+dist/
+build/
+*.log
+.DS_Store
+.env
+.env.local
+
+# Local SQLite state (recreated on boot)
+backend/data/*.db
+backend/data/*.db-*
+
+# AI interaction log working files
+*.tmp

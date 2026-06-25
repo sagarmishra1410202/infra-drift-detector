@@ -1,0 +1,24 @@
+{
+  "name": "deploy-orchestrator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A local-first deployment orchestration tool: trigger a promotion pipeline, watch it run live, approve the prod gate, and auto-roll-back broken builds.",
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev -w backend",
+    "dev:web": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "test": "npm run test -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
