@@ -1,8 +1,8 @@
 {
-  "name": "deploy-orchestrator",
+  "name": "drift-detector",
   "version": "1.0.0",
   "private": true,
-  "description": "A local-first deployment orchestration tool: trigger a promotion pipeline, watch it run live, approve the prod gate, and auto-roll-back broken builds.",
+  "description": "A local-first infrastructure drift detection & reconciliation tool: declare desired state, scan a mock cloud for drift, see exactly what diverged, and converge it back.",
   "workspaces": [
     "shared",
     "backend",
