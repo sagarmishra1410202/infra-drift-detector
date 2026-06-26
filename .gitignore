@@ -13,3 +13,8 @@ backend/data/*.db-*
 
 # AI interaction log working files
 *.tmp
+
+# Playwright MCP artifacts
+frontend/.playwright-mcp/
+.playwright-mcp/
+next-env.d.ts
